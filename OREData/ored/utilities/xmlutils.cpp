@@ -224,6 +224,21 @@ void XMLUtils::addChild(XMLDocument& doc, XMLNode* parent, const string& name, c
     addChild(doc, parent, name, boost::algorithm::join(strings, ","));
 }
 
+
+void XMLUtils::addChild(XMLDocument& doc, XMLNode* parent, const string& name, const vector<Period>& values) {
+	vector<string> strings(values.size());
+	std::transform(values.begin(), values.end(), strings.begin(), 
+				[](Period x) {
+            stringstream os;
+            os << x;
+            return os.str();
+        }
+			);
+	addChild(doc, parent, name, boost::algorithm::join(strings, ","));
+}
+
+
+
 void XMLUtils::addChildrenWithAttributes(XMLDocument& doc, XMLNode* parent, const string& names, const string& name,
                                          const vector<Real>& values, const string& attrName,
                                          const vector<string>& attrs) {

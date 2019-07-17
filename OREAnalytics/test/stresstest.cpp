@@ -245,7 +245,7 @@ BOOST_FIXTURE_TEST_SUITE(OREAnalyticsTestSuite, ore::test::OreaTopLevelFixture)
 
 BOOST_AUTO_TEST_SUITE(StressTestingTest)
 
-BOOST_AUTO_TEST_CASE(regression) {
+BOOST_AUTO_TEST_CASE(regression, *label("L1")) {
     BOOST_TEST_MESSAGE("Testing Sensitivity Par Conversion");
 
     SavedSettings backup;
@@ -331,6 +331,9 @@ BOOST_AUTO_TEST_CASE(regression) {
     BOOST_TEST_MESSAGE("Portfolio size after build: " << portfolio->size());
 
     // build the sensitivity analysis object
+	engineData->toFile("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_engine.xml");
+	simMarketData->toFile("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_sim.xml");
+	stressData->toFile("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_data.xml");
     ore::analytics::StressTest analysis(portfolio, initMarket, "default", engineData, simMarketData, stressData,
                                         conventions);
 

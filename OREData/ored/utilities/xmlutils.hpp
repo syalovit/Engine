@@ -150,6 +150,8 @@ public:
                             const vector<Real>& values);
     //! Adds <code>\<Name>v1,v2,v3\</Name></code> - the inverse of getChildrenValuesAsDoublesCompact
     static void addChild(XMLDocument& doc, XMLNode* n, const string& name, const vector<Real>& values);
+	static void addChild(XMLDocument& doc, XMLNode* parent, const string& name, const vector<Period>& values);
+
     static void addChildrenWithAttributes(XMLDocument& doc, XMLNode* n, const string& names, const string& name,
                                           const vector<Real>& values, const string& attrName,
                                           const vector<string>& attrs);
