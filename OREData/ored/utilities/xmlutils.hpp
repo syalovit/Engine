@@ -117,6 +117,8 @@ public:
     static void checkNode(XMLNode* n, const string& expectedName);
 
     static XMLNode* addChild(XMLDocument& doc, XMLNode* n, const string& name);
+   
+
     static void addChild(XMLDocument& doc, XMLNode* n, const string& name, const string& value);
     static void addChild(XMLDocument& doc, XMLNode* n, const string& name, const char* value);
     static void addChild(XMLDocument& doc, XMLNode* n, const string& name, Real value);

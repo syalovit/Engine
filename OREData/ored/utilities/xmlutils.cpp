@@ -170,6 +170,7 @@ void XMLUtils::addChild(XMLDocument& doc, XMLNode* n, const string& name, const 
     }
 }
 
+
 void XMLUtils::addChild(XMLDocument& doc, XMLNode* n, const string& name, Real value) {
     // We want to write out a double that conforms to xs:double, this means no
     // scientific notation, so we check for really small numbers here and explicitly set
