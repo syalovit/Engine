@@ -334,6 +334,9 @@ BOOST_AUTO_TEST_CASE(regression, *label("L1")) {
 	engineData->toFile("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_engine.xml");
 	simMarketData->toFile("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_sim.xml");
 	stressData->toFile("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_data.xml");
+    conventions.toFile("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_conventions.xml");
+	//portfolio->save("e:\\work\\src\\phoenix\\Talon\\Talon\\Input\\stress_portfolio.xml");
+    
     ore::analytics::StressTest analysis(portfolio, initMarket, "default", engineData, simMarketData, stressData,
                                         conventions);
 

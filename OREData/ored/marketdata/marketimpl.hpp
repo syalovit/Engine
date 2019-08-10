@@ -187,6 +187,10 @@ public:
     //! Send an explicit update() call to all term structures
     void refresh(const string& configuration = Market::defaultConfiguration);
 
+	virtual void fromXML(XMLNode* node);
+    virtual XMLNode* toXML(XMLDocument& doc);
+
+
 protected:
     Date asof_;
     // maps (configuration, key) => term structure

@@ -212,7 +212,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\OREAnalytics;..\OREData;..\QuantExt;..\QuantLib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\OREAnalytics;..\OREData;..\QuantExt;..\QuantLib;E:\work\src\phoenix\boost_1_63_0</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
       <PrecompiledHeaderOutputFile />
       <ProgramDataBaseFileName>$(IntDir)\%(RelativeDir)</ProgramDataBaseFileName>

@@ -63,7 +63,7 @@ enum class YieldCurveType {
 
   \ingroup marketdata
 */
-class Market {
+class Market : public XMLSerializable {
 public:
     //! Destructor
     virtual ~Market() {}
